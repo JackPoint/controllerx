@@ -26,6 +26,19 @@ class DoubleKeyWirelessAqaraController(LightController):
             "right_double": Light.CLICK_BRIGHTNESS_UP,
             "right_long": Light.CLICK_BRIGHTNESS_DOWN,
         }
+    
+    def get_deconz_actions_mapping(self):
+        return {
+            3002: Light.TOGGLE,
+            3004: Light.CLICK_BRIGHTNESS_UP,
+            3001: Light.CLICK_BRIGHTNESS_DOWN,
+            1002: Light.TOGGLE,
+            1004: Light.CLICK_BRIGHTNESS_UP,
+            1001: Light.CLICK_BRIGHTNESS_DOWN,
+            2002: Light.TOGGLE,
+            2004: Light.CLICK_BRIGHTNESS_UP,
+            2001: Light.CLICK_BRIGHTNESS_DOWN,
+        }
 
 
 class WXKG01LMLightController(LightController):
